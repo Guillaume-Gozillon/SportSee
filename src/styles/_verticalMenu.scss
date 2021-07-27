@@ -1,0 +1,29 @@
+.menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 117px;
+    background: black;
+    height: 69rem;
+    padding-bottom: 7rem;
+    & {
+        .white-icone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6rem;
+            height: 6rem;
+            background: white;
+            margin: 1rem;
+            border-radius: 1rem;
+        }
+    }
+    & .copywrite{
+        position: absolute;
+        bottom: 50px;
+        color: white;
+        writing-mode: vertical-rl;
+    }
+}

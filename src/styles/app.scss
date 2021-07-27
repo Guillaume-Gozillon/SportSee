@@ -26,7 +26,9 @@ li {list-style: none;}
     min-width: 1024px;
     height: 80%;
     min-height: 780px;
-    background-color: rgba(255, 0, 0, 0.151)
+    background-color: rgba(255, 0, 0, 0.151);
 }
 
 @import './header';
+@import './verticalMenu';
+@import './display';
