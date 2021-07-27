@@ -1,12 +1,19 @@
-import logo from './logo.svg';
+import Header from './Components/Header'
+import VerticalMenu from './Components/VerticalMenu'
+import "./styles/app.scss"
+import { Switch, Route } from "react-router"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>SportSee, the sport analytics</h1>
-      </header>
+    <div className='application-container'>
+      <Switch>
+        <Route path='/' exact >
+          <Header/>
+        </Route>
+        <Route path='/' exact >
+          <VerticalMenu/>
+        </Route>
+      </Switch>
     </div>
   )
 }
