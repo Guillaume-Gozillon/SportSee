@@ -1,10 +1,86 @@
 .canva {
-    margin-left: 21rem;
-    margin-top: 6rem;
+    margin-left: 18rem;
+    margin-top: 5rem;
     height: 63rem;
     // background-color: rgba(255, 0, 0, 0.226);
     & .title {
         font-size: 5rem;
         font-weight: 500;
+    }
+    & p {
+        font-size: 1.6rem;
+    }
+}
+
+.screen {
+    display: flex;
+    height: 53rem;
+    margin-top: 4rem;
+    & .screen-left {
+        display: flex;
+        flex-direction: column;
+        width: 70rem;
+        justify-content: space-between;
+    
+    }
+}
+
+.activity {
+    width: 100%;
+    height: 27rem;
+    background: red;
+    border-radius: .6rem;
+}
+
+.bottom-activity {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+}
+
+.length-activity {
+    width: 20rem;
+    height: 20rem;
+    background: blue;
+}
+
+.length-activity {
+    width: 22rem;
+    height: 22rem;
+    background: blue;
+    border-radius: .6rem;
+}
+
+.spider {
+    width: 22rem;
+    height: 22rem;
+    background: rgb(0, 0, 0);
+    border-radius: .6rem;
+}
+
+.score {
+    width: 22rem;
+    height: 22rem;
+    background: rgb(11, 214, 11);
+    border-radius: .6rem;
+}
+
+.calorie {        
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 1.3rem;
+    margin-left: 4rem;
+    width: 22rem;
+    height: 100%;
+    background: #0bd60b;
+    border-radius: .6rem;
+    color: white;
+    & .test {
+        width: 100%;
+        height: 10rem;
+        background: red;
+        border-radius: .6rem;
     }
 }

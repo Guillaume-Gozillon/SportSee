@@ -7,16 +7,16 @@ import { Link } from 'react-router-dom'
 const VerticalMenu = () => {
     return (
         <div className='menu'>
-            <Link className='white-icone'>
+            <Link to='/' className='white-icone'>
                 <img src={sit} alt="" />
             </Link>
-            <Link className='white-icone'>
+            <Link to='/' className='white-icone'>
                 <img src={swim} alt="" />
             </Link>
-            <Link className='white-icone'>
+            <Link to='/' className='white-icone'>
                 <img src={biking} alt="" />
             </Link>
-            <Link className='white-icone'>
+            <Link to='/' className='white-icone'>
                 <img src={workout} alt="" />
             </Link>
             <p className='copywrite'>Copywrite, SportSee 2021</p>

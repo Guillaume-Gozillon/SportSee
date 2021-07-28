@@ -5,6 +5,7 @@ const Welcome = ({data}) => {
     return (
         <div>
             <h1 className='title'>{`Bonjour ${name}`}</h1>
+            <p>Félicitation vous avez atteind vos objectifs 🤘</p>
         </div>
     )
 }
