@@ -1,18 +1,12 @@
-import Header from './Components/Header'
-import VerticalMenu from './Components/VerticalMenu'
-import Display from './Display/Display'
+import Display from './View/AllScreen'
 import "./styles/app.scss"
 import { Switch, Route } from "react-router"
 
 const App = () => {
   return (
-    <div className='application-container'>
+    <div className='none'>
       <Switch>
-        <Route path='/' exact >
-            <Header/>
-            <VerticalMenu/>
-            <Display/>
-          </Route>
+        <Route path='/' component={Display} exact />
       </Switch>
     </div>
   )
