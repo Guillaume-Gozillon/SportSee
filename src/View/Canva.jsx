@@ -1,9 +1,9 @@
 import Welcome from "../Components/Welcome"
 
-const Canva = () => {
+const Canva = ({data}) => {
     return (
         <div className='canva'>
-            <Welcome />
+            <Welcome data={data} />
         </div>
     )
 }

@@ -2,12 +2,12 @@ import Header from '../Components/Header'
 import VerticalMenu from '../Components/VerticalMenu'
 import Canva from './Canva'
 
-export const AllScreen = () => {
+export const AllScreen = ({data}) => {
     return (
         <div className='application-container'>
             <Header/>
             <VerticalMenu/>
-            <Canva/>
+            <Canva data={data}/>
         </div>
     )
 }
