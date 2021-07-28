@@ -18,7 +18,7 @@ const Canva = ({data}) => {
                         <Score />
                     </div>
                 </div>
-                <Calorie />
+                <Calorie data={data} />
             </div>
         </div>
     )

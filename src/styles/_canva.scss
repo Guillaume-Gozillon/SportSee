@@ -28,7 +28,7 @@
 .activity {
     width: 100%;
     height: 27rem;
-    background: red;
+    background: rgba(255, 0, 0, 0.26);
     border-radius: .6rem;
 }
 
@@ -36,51 +36,26 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    color: white;
-}
-
-.length-activity {
-    width: 20rem;
-    height: 20rem;
-    background: blue;
+    color: black;
 }
 
 .length-activity {
     width: 22rem;
     height: 22rem;
-    background: blue;
+    background: rgba(255, 187, 0, 0.219);
     border-radius: .6rem;
 }
 
 .spider {
     width: 22rem;
     height: 22rem;
-    background: rgb(0, 0, 0);
+    background: rgba(174, 0, 255, 0.253);
     border-radius: .6rem;
 }
 
 .score {
     width: 22rem;
     height: 22rem;
-    background: rgb(11, 214, 11);
+    background: rgba(11, 214, 204, 0.233);
     border-radius: .6rem;
-}
-
-.calorie {        
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-right: 1.3rem;
-    margin-left: 4rem;
-    width: 22rem;
-    height: 100%;
-    background: #0bd60b;
-    border-radius: .6rem;
-    color: white;
-    & .test {
-        width: 100%;
-        height: 10rem;
-        background: red;
-        border-radius: .6rem;
-    }
 }
