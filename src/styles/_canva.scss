@@ -1,11 +1,14 @@
 .canva {
     margin-left: 18rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     height: 63rem;
-    // background-color: rgba(255, 0, 0, 0.226);
     & .title {
         font-size: 5rem;
         font-weight: 500;
+        margin-bottom: 1.5rem;
+        & .name {
+            color: rgba(255, 0, 0, 0.808);
+        }
     }
     & p {
         font-size: 1.6rem;

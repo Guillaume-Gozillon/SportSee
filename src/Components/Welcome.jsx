@@ -4,7 +4,7 @@ const Welcome = ({user}) => {
 
     return (
         <div>
-            <h1 className='title'>{`Bonjour ${name}`}</h1>
+            <h1 className='title'>Bonjour <span className='name'>{name}</span></h1>
             <p>Félicitation vous avez atteind vos objectifs 🤘</p>
         </div>
     )

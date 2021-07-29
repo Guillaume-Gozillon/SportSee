@@ -1,7 +1,7 @@
 const LengthActivity = () => {
     return (
         <div className='length-activity'>
-            <p>test</p>
+            <p>Durée moyenne des sessions</p>
         </div>
     )
 }

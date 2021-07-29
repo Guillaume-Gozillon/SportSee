@@ -1,7 +1,7 @@
 const Spider = () => {
     return (
         <div className='spider'>
-            <p>test</p>
+            <p>Type d'activité</p>
         </div>
     )
 }

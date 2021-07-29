@@ -1,7 +1,7 @@
 const Score = () => {
     return (
         <div className='score'>
-            <p>test</p>
+            <p>Objectif de la journée</p>
         </div>
     )
 }
