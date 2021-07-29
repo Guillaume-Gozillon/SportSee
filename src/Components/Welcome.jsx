@@ -1,6 +1,6 @@
-const Welcome = ({data}) => {
+const Welcome = ({user}) => {
 
-    const name = data[0].userInfos.firstName
+    const name = user.userInfos.firstName
 
     return (
         <div>

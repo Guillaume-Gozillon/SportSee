@@ -3,16 +3,24 @@ import meat from '../img/meat.svg'
 import fruit from '../img/fruit.svg'
 import junkfood from '../img/junkfood.svg'
 
-const Calorie = ({data}) => {
+const Calorie = ({user}) => {
 
-    const calories = data[0].keyData.calorieCount
-    const proteines = data[0].keyData.proteinCount
-    const glucides = data[0].keyData.carbohydrateCount
-    const lipides = data[0].keyData.lipidCount
+    const calories = user.keyData.calorieCount
+    const proteines = user.keyData.proteinCount
+    const glucides = user.keyData.carbohydrateCount
+    const lipides = user.keyData.lipidCount
 
-    const nbWithCommas = nb => {
-        return nb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      }
+    /**
+     * this function return a number with commas
+     * @param {number}
+     * @return {number} numb
+     * 
+     *      * @return {number} number with commaser with commas
+     */
+
+    const nbWithCommas = nb => nb
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
     return (
         <div className='calorie'>

@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className='none'>
       <Switch>
-        <Route path='/' exact >
+        <Route path='/user/:id' exact >
           <AllScreen data={data}/>
         </Route>
       </Switch>
