@@ -11,11 +11,9 @@ const Calorie = ({user}) => {
     const lipides = user.keyData.lipidCount
 
     /**
-     * this function return a number with commas
+     * That function return a number with commas
      * @param {number}
-     * @return {number} numb
-     * 
-     *      * @return {number} number with commaser with commas
+     * @return {number} number with commaser with commas
      */
 
     const nbWithCommas = nb => nb

@@ -10,16 +10,18 @@ import { useState, useEffect } from "react"
 
 const Canva = ({data}) => {
 
+    const history = useHistory()
+    const url = history.location.pathname
+    
+    const [user, setUser] = useState(null)
+
     /**
-     * Write the function to filter by ID
-     * @param {number}
-     * @return {number} number with commas
+     * That useEffet return a user object filtered by ID
+     * due to the URL PATHNAME
+     * @memberof module:React
+     * @param {JSON} data JSON
+     * @return {Object} Object
      */
-
-     const history = useHistory()
-     const url = history.location.pathname
-
-     const [user, setUser] = useState(null)
 
      useEffect(() => {
          const currentUser = data
