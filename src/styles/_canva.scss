@@ -43,23 +43,48 @@
 }
 
 .length-activity {
+    position: relative;
     width: 22rem;
     height: 22rem;
     background: rgba(255, 0, 0, 0.897);
     border-radius: .6rem;
+    & .average-info {
+        position: absolute;
+        top: 1.8rem;
+        font-weight: 700;
+        left: 1rem;
+        color: rgba(255, 255, 255, 0.637);
+        font-size: 1.5rem;
+    }
 }
 
 .spider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 22rem;
     height: 22rem;
-    background: rgba(0, 0, 0, 0.712);
+    background: rgba(0, 0, 0, 0.87);
     border-radius: .6rem;
     color: white;
 }
 
 .score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: 22rem;
     height: 22rem;
     background: rgba(11, 214, 204, 0.233);
     border-radius: .6rem;
+    & .goal {
+        position: absolute;
+    }
+}
+
+.boldit {
+    font-size: 4rem;
 }

@@ -2,8 +2,7 @@ import {
     RadarChart,
     PolarGrid,
     PolarAngleAxis,
-    PolarRadiusAxis,
-    Radar
+    Radar,
  } from "recharts"
 
 const Spider = ({perf}) => {
@@ -52,19 +51,21 @@ const Spider = ({perf}) => {
       ]
 
     return (
-        <div className='spider'>
-            <p>Type d'activité</p>                 
-            <RadarChart outerRadius={90} width={230} height={250} data={data}>
-                <PolarGrid />
-                <PolarAngleAxis dataKey="subject" />
-                <PolarRadiusAxis angle={30} domain={[0, 150]} />
-                <Radar 
-                    name="Mike" 
-                    dataKey="A" 
-                    fill="#ff0000" 
-                    fillOpacity={0.6} 
+        <div className='spider'>          
+            <RadarChart outerRadius={70} width={200} height={200} data={data}>
+                <PolarGrid PolarAngleAxis='red' PolarAngleAxis=''  />
+                <PolarAngleAxis 
+                  dataKey="subject" 
+                  tick={{ fill: 'rgba(255, 255, 255, 0.774)' }}
+                  axisLine='false'
                 />
-            </RadarChart>
+                <Radar 
+                  name="Mike" 
+                  dataKey="A" 
+                  fill="#ff0000" 
+                  fillOpacity={0.6} 
+                />
+            </RadarChart >
         </div>
     )
 }
