@@ -7,7 +7,7 @@ import { USER_ACTIVITY as dataActivity } from '../data'
 import { USER_AVERAGE_SESSIONS as dataAverage } from '../data'
 import { USER_PERFORMANCE as dataPerf } from '../data'
 
-export const AllScreen = () => {
+const AllScreen = () => {
     return (
         <div className='application-container'>
             <Header/>
@@ -16,7 +16,8 @@ export const AllScreen = () => {
                 data={data} 
                 dataActivity={dataActivity}
                 dataAverage={dataAverage}
-                dataPerf={dataPerf}/>
+                dataPerf={dataPerf}
+            />
         </div>
     )
 }

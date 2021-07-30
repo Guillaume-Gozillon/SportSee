@@ -43,8 +43,47 @@ const Canva = ({data, dataActivity, dataAverage, dataPerf}) => {
          setActivity(currentActivity[0])
          setAverage(currentAverage[0])
          setPerf(currentPerf[0])
-     }, [data, url])
+     }, [])
 
+     return (
+        user && (
+           <div className='canva'> 
+               <Welcome user={user} />
+               <div className='screen'>
+                   <div className='screen-left'>
+                       <Activity activity={activity} />
+                       <div className='bottom-activity'>
+                           <AverageActivity average={average} />
+                           <Spider perf={perf} />
+                           <Score />
+                       </div>
+                   </div>
+                   <Calorie user={user} />
+               </div>
+           </div>
+       )
+   )
+
+{/*
+    if (user) {
+        return (
+            <div className='canva'>
+                <Welcome user={user} />
+                <div className='screen'>
+                    <div className='screen-left'>
+                        <Activity activity={activity} />
+                        <div className='bottom-activity'>
+                            <AverageActivity average={average} />
+                            <Spider perf={perf} />
+                            <Score />
+                        </div>
+                    </div>
+                    <Calorie user={user} />
+                </div>
+            </div>
+        )         
+     } return null
+  
     return (
         <div className='canva'>
             {user && <Welcome user={user} />}
@@ -63,6 +102,7 @@ const Canva = ({data, dataActivity, dataAverage, dataPerf}) => {
             )}
         </div>
     )
+*/}
 }
 
 export default Canva

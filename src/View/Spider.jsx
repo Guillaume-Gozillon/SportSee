@@ -7,9 +7,10 @@ import {
 
 const Spider = ({perf}) => {
 
-    console.log(perf.data);
     const value = perf.data
-    const kind = perf.kind
+    const test = perf.kind
+
+    // utiliser la data kind comme index pour trouver les matieres
 
     const data = [
         {
