@@ -11,7 +11,7 @@ const AverageActivity = ({average}) => {
     const data = average.sessions
 
     return (
-        <div className='length-activity'>
+        <div className='average-activity'>
             <p className='average-info'>Durée moyenne des sessions</p>
             <LineChart 
               width={220} 
@@ -21,10 +21,11 @@ const AverageActivity = ({average}) => {
 
               <defs>
                 <linearGradient id="colorUv">
-                  <stop offset="0%" stopColor="transparent" />
+                  <stop offset="0%" stopColor="rgba(255, 0, 0, 0.24)" />
                   <stop offset="10%" stopColor="#ffffff57" />
                   <stop offset="50%" stopColor="#ffffff9b" />
-                  <stop offset="100%" stopColor="#ffffff" />
+                  <stop offset="95%" stopColor="#ffffff" />
+                  <stop offset="100%" stopColor="rgba(255, 0, 0, 0.24)" />
                 </linearGradient>
               </defs>
 
@@ -42,7 +43,7 @@ const AverageActivity = ({average}) => {
                 type="natural" 
                 dataKey="sessionLength" 
                 stroke="url(#colorUv)"
-                strokeWidth={2.3}
+                strokeWidth={2.7}
                 dot='' />
             </LineChart>
         </div>

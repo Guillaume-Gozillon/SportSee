@@ -1,0 +1,28 @@
+.activity-info-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    & .activity-info {
+        display: flex;
+    }
+}
+
+.weight {
+    display: flex;
+    align-items: center;
+    & .circle {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        &.blackC {
+            background: black;
+        }
+        &.blackR {
+            background: red;
+            margin-left: 3rem;
+        }
+    }
+    & p {
+        margin-left: 1rem;
+    }
+}
