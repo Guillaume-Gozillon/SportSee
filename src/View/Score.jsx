@@ -1,45 +1,48 @@
 import { 
-    PieChart,
-    Pie
+  RadialBarChart,
+  RadialBar,
  } from "recharts"
 
-const Score = () => {
+const Score = ({user}) => {
 
-    const data02 = [
-        {
-          "name": "Group A",
-          "value": 2400
-        },
-        {
-          "name": "Group B",
-          "value": 4567
-        },
-        {
-          "name": "Group C",
-          "value": 1398
-        },
-        {
-          "name": "Group D",
-          "value": 9800
-        }
-      ]
+  const multiplyByHundred = nb => nb * 100 
 
-    return (
+  const dataValue = user.todayScore
+
+  const data = [
+    {
+      "scoreBar": dataValue,
+      "fill": "rgba(255, 0, 0, 0.897)"
+    },
+    {
+      "scoreBar": 1,
+      "fill": "#FBFBFB"
+    }
+  ]
+
+  //TODO :supprimer BR remplacer par CSS
+      return (
         <div className='score'>
             <p>Score</p>
-            <PieChart width={200} height={200}>
-                <Pie 
-                    data={data02} 
-                    cx="50%" cy="50%" 
-                    dataKey="value" 
-                    nameKey="name" 
-                    innerRadius={60} 
-                    outerRadius={80} 
-                    fill="#82ca9d" 
-                    label 
-                />
-            </PieChart>
-            <p className='goal'><span className='boldit'>12%</span> de votre objectif aujourdhui</p>
+            <RadialBarChart 
+              width={730} 
+              height={250} 
+              innerRadius="82%" 
+              outerRadius="60%"
+              data={data} 
+              startAngle={180}
+              endAngle={540} >
+                <RadialBar 
+                isAnimationActive={false}
+                  minAngle={15}                   
+                  background clockWise={true}
+                  dataKey='scoreBar' />
+            </RadialBarChart>
+            <p className='goal'>
+              <span className='bolder'>{
+                multiplyByHundred(dataValue)
+              }%</span><br/> de votre <br/>objectif
+            </p>
         </div>
     )
 }

@@ -8,11 +8,37 @@ import {
 const Spider = ({perf}) => {
 
     const value = perf.data
-    const test = perf.kind
+    const sportProperties = perf.kind
+    const translate = {
+      "strength" : "force",
+      "speed" : "vitesse",
+      "intensity" : "intensité"
+    }
+
+    value.forEach(x => console.log(x.value))
+
+    const data = []
+
+    for (const [key, value] of Object.entries(sportProperties)){
+      data[key - 1] = {
+        "subject" : translate[value] ? translate[value] : value,
+      }
+    }
+
+    Object.defineProperties(data, {
+      'A': value
+    })
+
+    // console.log('sans', sportProperties)
+    // console.log('keys', Object.keys(sportProperties))
+    // console.log('values', Object.values(sportProperties))
+    // console.log('entries', Object.entries(sportProperties))
+    console.log('data object', data)
+    // console.log('value', value)
 
     // utiliser la data kind comme index pour trouver les matieres
 
-    const data = [
+    const dataTest = [
         {
           "subject": "Math",
           "A": 120,
@@ -24,48 +50,26 @@ const Spider = ({perf}) => {
           "A": 98,
           "B": 130,
           "fullMark": 150
-        },
-        {
-          "subject": "English",
-          "A": 86,
-          "B": 130,
-          "fullMark": 150
-        },
-        {
-          "subject": "Geography",
-          "A": 99,
-          "B": 100,
-          "fullMark": 150
-        },
-        {
-          "subject": "Physics",
-          "A": 85,
-          "B": 90,
-          "fullMark": 150
-        },
-        {
-          "subject": "History",
-          "A": 65,
-          "B": 85,
-          "fullMark": 150
         }
       ]
 
     return (
         <div className='spider'>          
-            <RadarChart outerRadius={70} width={200} height={200} data={data}>
-                <PolarGrid PolarAngleAxis='red' PolarAngleAxis=''  />
+            <RadarChart 
+              outerRadius={70} 
+              width={200} 
+              height={200} 
+              data={data}>
+                <PolarGrid PolarAngleAxis='red' PolarAngleAxis='' />
                 <PolarAngleAxis 
                   dataKey="subject" 
                   tick={{ fill: 'rgba(255, 255, 255, 0.774)' }}
-                  axisLine='false'
-                />
+                  axisLine='false' />
                 <Radar 
                   name="Mike" 
-                  dataKey="A" 
+                  //dataKey="A" 
                   fill="#ff0000" 
-                  fillOpacity={0.6} 
-                />
+                  fillOpacity={0.6} />
             </RadarChart >
         </div>
     )

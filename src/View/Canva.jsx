@@ -55,7 +55,7 @@ const Canva = ({data, dataActivity, dataAverage, dataPerf}) => {
                        <div className='bottom-activity'>
                            <AverageActivity average={average} />
                            <Spider perf={perf} />
-                           <Score />
+                           <Score user={user} />
                        </div>
                    </div>
                    <Calorie user={user} />
