@@ -1,9 +1,11 @@
 .activity-info-container {
     display: flex;
     width: 100%;
+    margin-bottom: 4rem;
     justify-content: space-between;
     & .activity-info {
         display: flex;
+        color: #00000087;
     }
 }
 

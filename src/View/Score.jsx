@@ -20,29 +20,37 @@ const Score = ({user}) => {
     }
   ]
 
-  //TODO :supprimer BR remplacer par CSS
       return (
         <div className='score'>
-            <p>Score</p>
+            <p className='score-txt'>Score</p>
             <RadialBarChart 
               width={730} 
               height={250} 
               innerRadius="82%" 
               outerRadius="60%"
               data={data} 
-              startAngle={180}
-              endAngle={540} >
+              startAngle={90}
+              endAngle={450} >
                 <RadialBar 
-                isAnimationActive={false}
+                  isAnimationActive={false}
                   minAngle={15}                   
                   background clockWise={true}
-                  dataKey='scoreBar' />
+                  cornerRadius="50%"
+                  dataKey='scoreBar' 
+                />
             </RadialBarChart>
-            <p className='goal'>
+            <div className='goal'>
               <span className='bolder'>{
-                multiplyByHundred(dataValue)
-              }%</span><br/> de votre <br/>objectif
-            </p>
+                  multiplyByHundred(dataValue)
+                }%
+              </span>
+              <span>
+                <p>de votre</p>
+              </span>
+              <span>
+                <p>objectif</p>
+              </span>
+            </div>
         </div>
     )
 }

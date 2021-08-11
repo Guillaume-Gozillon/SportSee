@@ -23,9 +23,9 @@ const Spider = ({perf}) => {
       // -1 car l'obj commence à 1
       data[key - 1] = {
         // Ternary condition to translate ENG to FR
-        "subject": translate[objValue] ? translate[objValue] : objValue,
+        "property": translate[objValue] ? translate[objValue] : objValue,
         // On parcours le tableau des stats en revenant à l'index initial
-        "A": statValue[key - 1].value
+        "stat": statValue[key - 1].value
       }
     }
 
@@ -33,17 +33,17 @@ const Spider = ({perf}) => {
         <div className='spider'>          
             <RadarChart 
               outerRadius={70} 
-              width={200} 
+              width={240} 
               height={200} 
               data={data}>
                 <PolarGrid PolarAngleAxis='red' PolarAngleAxis='' />
                 <PolarAngleAxis 
-                  dataKey="subject" 
+                  dataKey="property" 
                   tick={{ fill: 'rgba(255, 255, 255, 0.774)' }}
-                  axisLine='false' />
+                  vertical='' />
                 <Radar 
                   name="Mike" 
-                  dataKey="A" 
+                  dataKey="stat" 
                   fill="#ff0000" 
                   fillOpacity={0.6} />
             </RadarChart >
