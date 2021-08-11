@@ -7,51 +7,27 @@ import {
 
 const Spider = ({perf}) => {
 
-    const value = perf.data
+    const statValue = perf.data
     const sportProperties = perf.kind
-    const translate = {
-      "strength" : "force",
-      "speed" : "vitesse",
-      "intensity" : "intensité"
-    }
 
-    value.forEach(x => console.log(x.value))
+    const translate = {
+      "strength": "force",
+      "speed": "vitesse",
+      "intensity": "intensité"
+    }
 
     const data = []
 
-    for (const [key, value] of Object.entries(sportProperties)){
+    // On parcours la paire clé/valeur
+    for (const [key, objValue] of Object.entries(sportProperties)){
+      // -1 car l'obj commence à 1
       data[key - 1] = {
-        "subject" : translate[value] ? translate[value] : value,
+        // Ternary condition to translate ENG to FR
+        "subject": translate[objValue] ? translate[objValue] : objValue,
+        // On parcours le tableau des stats en revenant à l'index initial
+        "A": statValue[key - 1].value
       }
     }
-
-    Object.defineProperties(data, {
-      'A': value
-    })
-
-    // console.log('sans', sportProperties)
-    // console.log('keys', Object.keys(sportProperties))
-    // console.log('values', Object.values(sportProperties))
-    // console.log('entries', Object.entries(sportProperties))
-    console.log('data object', data)
-    // console.log('value', value)
-
-    // utiliser la data kind comme index pour trouver les matieres
-
-    const dataTest = [
-        {
-          "subject": "Math",
-          "A": 120,
-          "B": 10,
-          "fullMark": 150
-        },
-        {
-          "subject": "Chinese",
-          "A": 98,
-          "B": 130,
-          "fullMark": 150
-        }
-      ]
 
     return (
         <div className='spider'>          
@@ -67,7 +43,7 @@ const Spider = ({perf}) => {
                   axisLine='false' />
                 <Radar 
                   name="Mike" 
-                  //dataKey="A" 
+                  dataKey="A" 
                   fill="#ff0000" 
                   fillOpacity={0.6} />
             </RadarChart >
