@@ -25,7 +25,7 @@ const AverageActivity = ({average}) => {
     for (const [key] of Object.entries(sessionActivity)){
       data[key] =
         {
-          "day": sessionActivity.map(x => dateToLetter[x.day]),
+          "day": sessionActivity.map(obj => dateToLetter[obj.day]),
           "sessionLength": sessionActivity[key].sessionLength
         }
     }
