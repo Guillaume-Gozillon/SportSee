@@ -43,7 +43,7 @@ const Activity = ({activity}) => {
         if (label - 1 === 6) {
             return data[label - 1].calories
         }
-      }
+    }
 
     const getKilogram = label => {
         if (label - 1 === 0) {
@@ -78,7 +78,7 @@ const Activity = ({activity}) => {
                 </div>
             )
         }
-    return null
+        return null
     }
 
     return (

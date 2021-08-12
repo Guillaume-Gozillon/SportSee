@@ -33,7 +33,7 @@ const AverageActivity = ({average}) => {
     const getTime = label => {
       console.log(label);
       if (label === 'L') {
-        console.log(data);
+        console.log(data)
         return data[0].sessionLength
         }
       if (label - 1 === 1) {
