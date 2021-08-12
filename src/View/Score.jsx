@@ -5,9 +5,19 @@ import {
 
 const Score = ({user}) => {
 
+  const dataValue = user.todayScore
+
   const multiplyByHundred = nb => nb * 100 
 
-  const dataValue = user.todayScore
+  /**
+   * To create an unfilled percentage circle, we need a comparative value.
+   * The value of the data is between 0 and 1.
+   * Then, to get a circle in percentage this value will be compared to 1
+   * 
+   * We will create a new table with the API data
+   * @param {Number} API data
+   * @return {Array} Data source used by <RadialBarChart />
+   */
 
   const data = [
     {

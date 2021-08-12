@@ -17,7 +17,7 @@ const Activity = ({activity}) => {
      * A loop through the props object to create a 
      * new array that matches with the dataKey requested
      * @param {Object} props
-     * @return {Array} used for dataKey and <CustomTooltip />
+     * @return {Array} used by <BarChart /> and <CustomTooltip />
      */
 
     for (const [key, value] of Object.entries(activityValue)){
@@ -32,7 +32,7 @@ const Activity = ({activity}) => {
      * A function that compares the index on mouse hover (label) 
      * with the API data to create the Tooltip's data
      * @param {Array} label index
-     * @return {Number}
+     * @return {Number} Data used by <CustomTooltip />
      */
       
     const getCalories = label => {
@@ -86,7 +86,7 @@ const Activity = ({activity}) => {
     /**
      * Function that create HTMLElement for the <Tooltip /> mouse over
      * @param {Function} Recharts's parameters
-     * @return {HTMLElement}
+     * @return {HTMLElement} Create the DOM
      */
     
     const CustomTooltip = ({ active, payload, label }) => {
