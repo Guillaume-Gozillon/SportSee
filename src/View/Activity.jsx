@@ -83,6 +83,12 @@ const Activity = ({activity}) => {
             return data[label - 1].kilogram
         }
     }
+
+    /**
+     * Function that create HTMLElement for the <Tooltip /> mouse over
+     * @param {Function} Recharts's parameters
+     * @return {HTMLElement}
+     */
     
     const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
