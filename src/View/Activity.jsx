@@ -72,10 +72,10 @@ const Activity = ({activity}) => {
     const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
             return (
-            <div className="custom-tooltip">
-                <p>{getCalories(label)}kg</p>
-                <p>{getKilogram(label)}Kcal</p>
-            </div>
+                <div className="custom-tooltip">
+                    <p>{getCalories(label)}kg</p>
+                    <p>{getKilogram(label)}Kcal</p>
+                </div>
             )
         }
     return null
@@ -117,8 +117,7 @@ const Activity = ({activity}) => {
                     tickLine={false} />
                 <Tooltip 
                     cursor={{fill: '#0000001c'}} 
-                    content={<CustomTooltip />}
-                   />
+                    content={<CustomTooltip />} />
                 <Bar 
                     dataKey="kilogram" 
                     fill="#000000ce" 
