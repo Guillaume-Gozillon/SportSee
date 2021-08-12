@@ -24,13 +24,13 @@ const Activity = ({activity}) => {
     const getCalories = label => {
         if (label - 1 === 0) {
             return data[label - 1].calories
-          }
+        }
         if (label - 1 === 1) {
             return data[label - 1].calories
         }
         if (label - 1 === 2) {
             return data[label - 1].calories
-          }
+        }
         if (label - 1 === 3) {
             return data[label - 1].calories
         }
@@ -48,13 +48,13 @@ const Activity = ({activity}) => {
     const getKilogram = label => {
         if (label - 1 === 0) {
             return data[label - 1].kilogram
-            }
+        }
         if (label - 1 === 1) {
             return data[label - 1].kilogram
         }
         if (label - 1 === 2) {
             return data[label - 1].kilogram
-            }
+        }
         if (label - 1 === 3) {
             return data[label - 1].kilogram
         }
