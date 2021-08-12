@@ -10,9 +10,7 @@ const AverageActivity = ({average}) => {
 
     const sessionActivity = average.sessions
 
-    const data = []
-
-    const translate = {
+    const dateToLetter = {
       1: "L",
       2: "M",
       3: "M",
@@ -22,49 +20,26 @@ const AverageActivity = ({average}) => {
       7: "D",
     }
 
-    console.log(Object.values(translate));
+    const data = []
 
-    for (const [key, value] of Object.keys(sessionActivity)){
-        data[key] = {
-            "day": translate[value],
+    for (const [key] of Object.entries(sessionActivity)){
+      data[key] =
+        {
+          "day": sessionActivity.map(x => dateToLetter[x.day]),
+          "sessionLength": sessionActivity[key].sessionLength
         }
-    }
-
-    const getTime = label => {
-      console.log(label);
-      if (label === 'L') {
-        console.log(data)
-        return data[0].sessionLength
-        }
-      if (label - 1 === 1) {
-        return data[0].sessionLength
-      }
-      if (label - 1 === 2) {
-        return data[0].sessionLength
-        }
-      if (label - 1 === 3) {
-        return data[0].sessionLength
-      }
-      if (label - 1 === 4) {
-        return data[0].sessionLength
-      }
-      if (label - 1 === 5) {
-        return data[0].sessionLength
-      }
-      if (label - 1 === 6) {
-        return data[0].sessionLength
-      }
     }
 
     const CustomTooltip = ({ active, payload, label }) => {
       if (active && payload && payload.length) {
         return (
-          <div className="aze-tooltip">
-            <p>{getTime(label)}mn</p>
+          <div className="custom-average">
+            <p className="label">{payload[0].value} min</p>
           </div>
-        )
+        );
       }
-      return null
+    
+      return null;
     }
 
     return (

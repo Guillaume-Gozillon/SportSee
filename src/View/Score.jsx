@@ -12,9 +12,9 @@ const Score = ({user}) => {
   /**
    * To create an unfilled percentage circle, we need a comparative value.
    * The value of the data is between 0 and 1.
-   * Then, to get a circle in percentage this value will be compared to 1
+   * Then, to get a percentage circle this value will be compared to 1.
    * 
-   * We will create a new array with the data pushed
+   * We will create a new array with the data pushed :
    * @param {Number} API data
    * @return {Array} Data source used by <RadialBarChart />
    */
@@ -40,6 +40,7 @@ const Score = ({user}) => {
               outerRadius="60%"
               data={data} 
               startAngle={90}
+              wrapperStyle={{ backgroundColor: '#999999' }}
               endAngle={450} >
                 <RadialBar 
                   isAnimationActive={false}

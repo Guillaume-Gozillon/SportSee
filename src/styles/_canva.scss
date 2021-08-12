@@ -40,6 +40,14 @@
     justify-content: space-between;
     width: 100%;
     color: black;
+    & .custom-average {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        height: 4rem;
+        width: 8rem;
+    }
 }
 
 .average-activity {
@@ -82,6 +90,10 @@
     border-radius: .6rem;
     & .goal {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     & .score-txt {
         position: absolute;
