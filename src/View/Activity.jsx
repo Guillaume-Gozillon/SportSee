@@ -29,14 +29,13 @@ const Activity = ({activity}) => {
     }
 
     /**
-     * A function that compares the index on 
-     * mouse hover (label) with the API data
+     * A function that compares the index on mouse hover (label) 
+     * with the API data to create the Tooltip's data
      * @param {Array} label index
      * @return {Number}
      */
       
     const getCalories = label => {
-        console.log(label);
         if (label - 1 === 0) {
             return data[label - 1].calories
         }
