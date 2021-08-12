@@ -20,6 +20,66 @@ const Activity = ({activity}) => {
             "kilogram": value.kilogram
         }
     }
+      
+    const getCalories = label => {
+        if (label - 1 === 0) {
+            return data[label - 1].calories
+          }
+        if (label - 1 === 1) {
+            return data[label - 1].calories
+        }
+        if (label - 1 === 2) {
+            return data[label - 1].calories
+          }
+        if (label - 1 === 3) {
+            return data[label - 1].calories
+        }
+        if (label - 1 === 4) {
+            return data[label - 1].calories
+        }
+        if (label - 1 === 5) {
+            return data[label - 1].calories
+        }
+        if (label - 1 === 6) {
+            return data[label - 1].calories
+        }
+      }
+
+    const getKilogram = label => {
+    if (label - 1 === 0) {
+        return data[label - 1].kilogram
+        }
+    if (label - 1 === 1) {
+        return data[label - 1].kilogram
+    }
+    if (label - 1 === 2) {
+        return data[label - 1].kilogram
+        }
+    if (label - 1 === 3) {
+        return data[label - 1].kilogram
+    }
+    if (label - 1 === 4) {
+        return data[label - 1].kilogram
+    }
+    if (label - 1 === 5) {
+        return data[label - 1].kilogram
+    }
+    if (label - 1 === 6) {
+        return data[label - 1].kilogram
+    }
+    }
+    
+    const CustomTooltip = ({ active, payload, label }) => {
+        if (active && payload && payload.length) {
+            return (
+            <div className="custom-tooltip">
+                <p>{getCalories(label)}kg</p>
+                <p>{getKilogram(label)}Kcal</p>
+            </div>
+            )
+        }
+    return null
+    }
 
     return (
         <div className='activity'>
@@ -53,9 +113,12 @@ const Activity = ({activity}) => {
                 <YAxis 
                     tickCount='3' 
                     axisLine={false} 
-                    tick={{dx: 675, fill: '#0000005a', fontSize: '15px'}}
+                    tick={{dx: 680, fill: '#0000005a', fontSize: '15px'}}
                     tickLine={false} />
-                <Tooltip />
+                <Tooltip 
+                    cursor={{fill: '#0000001c'}} 
+                    content={<CustomTooltip />}
+                   />
                 <Bar 
                     dataKey="kilogram" 
                     fill="#000000ce" 

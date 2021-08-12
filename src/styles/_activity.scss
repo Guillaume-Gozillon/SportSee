@@ -1,8 +1,7 @@
 .activity-info-container {
     display: flex;
-    width: 100%;
-    margin-bottom: 4rem;
     justify-content: space-between;
+    margin: 0.5rem 2rem 3.5rem 2rem;
     & .activity-info {
         display: flex;
         color: #00000087;
@@ -26,5 +25,19 @@
     }
     & p {
         margin-left: 1rem;
+    }
+}
+
+.custom-tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: red;
+    height: 9rem;
+    width: 5.5rem;
+    & p {
+        font-size: 1.2rem;
     }
 }

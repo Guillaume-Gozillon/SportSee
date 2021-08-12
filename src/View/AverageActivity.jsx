@@ -8,7 +8,64 @@ import {
 
 const AverageActivity = ({average}) => {
 
-    const data = average.sessions
+    const sessionActivity = average.sessions
+
+    const data = []
+
+    const translate = {
+      1: "L",
+      2: "M",
+      3: "M",
+      4: "J",
+      5: "V",
+      6: "S",
+      7: "D",
+    }
+
+    console.log(Object.values(translate));
+
+    for (const [key, value] of Object.keys(sessionActivity)){
+        data[key] = {
+            "day": translate[value],
+        }
+    }
+
+    const getTime = label => {
+      console.log(label);
+      if (label === 'L') {
+        console.log(data);
+        return data[0].sessionLength
+        }
+      if (label - 1 === 1) {
+        return data[0].sessionLength
+      }
+      if (label - 1 === 2) {
+        return data[0].sessionLength
+        }
+      if (label - 1 === 3) {
+        return data[0].sessionLength
+      }
+      if (label - 1 === 4) {
+        return data[0].sessionLength
+      }
+      if (label - 1 === 5) {
+        return data[0].sessionLength
+      }
+      if (label - 1 === 6) {
+        return data[0].sessionLength
+      }
+    }
+
+    const CustomTooltip = ({ active, payload, label }) => {
+      if (active && payload && payload.length) {
+        return (
+          <div className="aze-tooltip">
+            <p>{getTime(label)}mn</p>
+          </div>
+        )
+      }
+      return null
+    }
 
     return (
         <div className='average-activity'>
@@ -38,7 +95,7 @@ const AverageActivity = ({average}) => {
                 tickLine='false'
                 stroke="rgba(255, 0, 0, 0.041)"
                 tick={{ fill: 'rgba(255, 255, 255, 0.774)' }} />
-              <Tooltip />
+              <Tooltip content={<CustomTooltip />} />
               <Line 
                 type="natural" 
                 dataKey="sessionLength" 
