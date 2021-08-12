@@ -46,27 +46,27 @@ const Activity = ({activity}) => {
       }
 
     const getKilogram = label => {
-    if (label - 1 === 0) {
-        return data[label - 1].kilogram
+        if (label - 1 === 0) {
+            return data[label - 1].kilogram
+            }
+        if (label - 1 === 1) {
+            return data[label - 1].kilogram
         }
-    if (label - 1 === 1) {
-        return data[label - 1].kilogram
-    }
-    if (label - 1 === 2) {
-        return data[label - 1].kilogram
+        if (label - 1 === 2) {
+            return data[label - 1].kilogram
+            }
+        if (label - 1 === 3) {
+            return data[label - 1].kilogram
         }
-    if (label - 1 === 3) {
-        return data[label - 1].kilogram
-    }
-    if (label - 1 === 4) {
-        return data[label - 1].kilogram
-    }
-    if (label - 1 === 5) {
-        return data[label - 1].kilogram
-    }
-    if (label - 1 === 6) {
-        return data[label - 1].kilogram
-    }
+        if (label - 1 === 4) {
+            return data[label - 1].kilogram
+        }
+        if (label - 1 === 5) {
+            return data[label - 1].kilogram
+        }
+        if (label - 1 === 6) {
+            return data[label - 1].kilogram
+        }
     }
     
     const CustomTooltip = ({ active, payload, label }) => {
