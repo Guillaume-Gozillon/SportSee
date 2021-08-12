@@ -14,7 +14,7 @@ const Score = ({user}) => {
    * The value of the data is between 0 and 1.
    * Then, to get a circle in percentage this value will be compared to 1
    * 
-   * We will create a new table with the API data
+   * We will create a new array with the data pushed
    * @param {Number} API data
    * @return {Array} Data source used by <RadialBarChart />
    */
