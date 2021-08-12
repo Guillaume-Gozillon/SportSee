@@ -13,6 +13,13 @@ const Activity = ({activity}) => {
 
     const data = []
 
+    /**
+     * A loop on the props object to create a 
+     * new array that matches with the dataKey requested
+     * @param {Object} props
+     * @return {Array} used for dataKey and <CustomTooltip />
+     */
+
     for (const [key, value] of Object.entries(activityValue)){
         data[key] = {
             "day": Number(key) + 1,
@@ -20,8 +27,16 @@ const Activity = ({activity}) => {
             "kilogram": value.kilogram
         }
     }
+
+    /**
+     * A function that compares the index on 
+     * mouse hover (label) with the API data
+     * @param {Array} label index
+     * @return {Number}
+     */
       
     const getCalories = label => {
+        console.log(label);
         if (label - 1 === 0) {
             return data[label - 1].calories
         }
