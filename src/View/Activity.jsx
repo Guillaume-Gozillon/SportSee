@@ -14,7 +14,7 @@ const Activity = ({activity}) => {
     const data = []
 
     /**
-     * A loop on the props object to create a 
+     * A loop through the props object to create a 
      * new array that matches with the dataKey requested
      * @param {Object} props
      * @return {Array} used for dataKey and <CustomTooltip />
