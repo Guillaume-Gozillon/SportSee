@@ -70,7 +70,10 @@ const AverageActivity = ({average}) => {
                 tickLine='false'
                 stroke="rgba(255, 0, 0, 0.041)"
                 tick={{ fill: 'rgba(255, 255, 255, 0.774)' }} />
-              <Tooltip content={<CustomTooltip />} />
+              <Tooltip 
+              content={<CustomTooltip />} 
+              cursor={{ stroke: 'transparent' }} 
+              />
               <Line 
                 type="natural" 
                 dataKey="sessionLength" 
