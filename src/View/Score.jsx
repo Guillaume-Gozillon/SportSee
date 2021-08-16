@@ -5,7 +5,7 @@ import {
 
 const Score = ({user}) => {
 
-  const dataValue = user.todayScore
+  const dataValue = user.todayScore ? user.todayScore : user.score
 
   const multiplyByHundred = nb => nb * 100 
 
