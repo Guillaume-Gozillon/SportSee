@@ -24,7 +24,7 @@ const Canva = () => {
     const average = useFetch(BASE_URL_AVERAGE)
     const perf = useFetch(BASE_URL_PERF)
 
-    // Réécrire la doc
+    // Réécrire la doc car implémentation du backend 
 
     /**
      * That useEffet return a user object filtered by ID
