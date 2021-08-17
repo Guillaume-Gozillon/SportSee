@@ -19,13 +19,20 @@ const Spider = ({perf}) => {
 
     const data = []
 
-    // On parcours la paire clé/valeur
+    /**
+     * A loop through the props object to create a 
+     * new array that matches with the dataKey requested
+     * 
+     * The stat array from data start at 1 => [key - 1]
+     * @param {Object} props
+     * @param {Object} {translate} to translate ENG to FR
+     * @return {Array} used by <RadarChart />
+     */
+
     for (const [key, objValue] of Object.entries(sportProperties)){
-      // -1 car l'obj commence à 1
+
       data[key - 1] = {
-        // Ternary condition to translate ENG to FR
         "property": translate[objValue] ? translate[objValue] : objValue,
-        // On parcours le tableau des stats en revenant à l'index initial
         "stat": statValue[key - 1].value
       }
     }

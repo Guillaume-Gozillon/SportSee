@@ -23,6 +23,13 @@ const AverageActivity = ({average}) => {
 
     const data = []
 
+    /**
+     * A loop through the props object to create a 
+     * new array that matches with the dataKey requested
+     * @param {Object} props
+     * @return {Array} used by <LineChart /> and <CustomTooltip />
+     */
+
     for (const [key] of Object.entries(sessionActivity)){
       data[key] =
         {
@@ -30,6 +37,12 @@ const AverageActivity = ({average}) => {
           "sessionLength": sessionActivity[key].sessionLength
         }
     }
+
+    /**
+     * Function that create HTMLElement for the <Tooltip /> mouse over
+     * @param {Function} Recharts's parameters
+     * @return {HTMLElement} Create the DOM
+     */
 
     const CustomTooltip = ({ active, payload, label }) => {
       if (active && payload && payload.length) {
@@ -40,7 +53,7 @@ const AverageActivity = ({average}) => {
         );
       }
     
-      return null;
+      return null
     }
 
     return (
