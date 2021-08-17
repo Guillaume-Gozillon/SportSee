@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { 
   RadialBarChart,
   RadialBar,
@@ -64,6 +65,10 @@ const Score = ({user}) => {
             </div>
         </div>
     )
+}
+
+Score.propTypes = {
+  user: PropTypes.object
 }
 
 export default Score

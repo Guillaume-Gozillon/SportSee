@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from 'react'
 
 const useFetch = url => {
@@ -14,6 +15,10 @@ const useFetch = url => {
   }, [])
 
   return data
+}
+
+useFetch.propTypes = {
+  data: PropTypes.string
 }
 
 export default useFetch

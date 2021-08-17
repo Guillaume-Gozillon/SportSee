@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import fire from '../img/fire.svg'
 import meat from '../img/meat.svg'
 import fruit from '../img/fruit.svg'
@@ -65,5 +66,9 @@ const Calorie = ({user}) => {
         </div>
     )
 }
+
+Calorie.propTypes = {
+    user: PropTypes.object
+  }
 
 export default Calorie

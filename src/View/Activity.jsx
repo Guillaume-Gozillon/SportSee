@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { 
     BarChart, 
     Bar, 
@@ -151,5 +152,9 @@ const Activity = ({activity}) => {
         </div>
     )
 }
+
+Activity.propTypes = {
+    activity: PropTypes.object
+  }
 
 export default Activity

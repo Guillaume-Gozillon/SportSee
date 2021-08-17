@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Welcome = ({user}) => {
 
     const name = user.userInfos.firstName
@@ -9,5 +10,9 @@ const Welcome = ({user}) => {
         </div>
     )
 }
+
+Welcome.propTypes = {
+    user: PropTypes.object
+  }
 
 export default Welcome

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { 
     RadarChart,
     PolarGrid,
@@ -49,6 +50,10 @@ const Spider = ({perf}) => {
             </RadarChart >
         </div>
     )
+}
+
+Spider.propTypes = {
+  perf: PropTypes.object
 }
 
 export default Spider

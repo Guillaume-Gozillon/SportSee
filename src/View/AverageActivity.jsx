@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { 
     LineChart,
     CartesianGrid,
@@ -83,6 +84,10 @@ const AverageActivity = ({average}) => {
             </LineChart>
         </div>
     )
+}
+
+AverageActivity.propTypes = {
+  average: PropTypes.object
 }
 
 export default AverageActivity
